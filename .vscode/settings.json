@@ -1,0 +1,14 @@
+{
+    "prettier.enable": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "cSpell.words": [
+      "asar",
+      "degitlab",
+      "dohooo",
+      "npmrc",
+      "typecheck"
+    ]
+  }
+  

@@ -9,7 +9,7 @@
  * @see https://www.electron.build/configuration/configuration
  */
 module.exports = async function () {
-  const {getVersion} = await import('./version/getVersion.mjs');
+  const { getVersion } = await import('./version/getVersion.mjs');
 
   return {
     directories: {
@@ -20,7 +20,8 @@ module.exports = async function () {
     extraMetadata: {
       version: getVersion(),
     },
-
+    // [🔴 TODO] disable the code signing.
+    mac:{ identity: null },
     // Specify linux target just for disabling snap compilation
     linux: {
       target: 'deb',

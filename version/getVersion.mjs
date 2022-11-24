@@ -1,5 +1,5 @@
-import {readFileSync} from 'node:fs';
-import {resolve} from 'node:path';
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 /**
  * Cache app version. Just to prevent multiple reading from fs
@@ -17,7 +17,7 @@ let CACHED_VERSION = null;
 export function getVersion(root = process.cwd()) {
   if (CACHED_VERSION === null) {
     CACHED_VERSION = JSON.parse(
-      readFileSync(resolve(root, 'package.json'), {encoding: 'utf8'}),
+      readFileSync(resolve(root, "package.json"), { encoding: "utf8" }),
     ).version;
   }
   return CACHED_VERSION;
